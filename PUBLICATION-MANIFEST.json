@@ -382,6 +382,11 @@
       "path": "UPSTREAM-README.md",
       "bytes": 77,
       "sha256": "F20D89B06174C654FC7C90B7DE49B7A9E048D5A0F5021FE3D19B502582170F86"
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705FD4D6451A31D36B3DF7DE96F83F30AC976C9B4A6D1E51671D8E2F33E2D0DA"
     }
   ],
   "omitted": [
@@ -768,5 +773,6 @@
   ],
   "runtime_dlls_unchanged_from_intake": true,
   "csharp_sources_present": false,
-  "native_testing_for_publication": false
+  "native_testing_for_publication": false,
+  "git_text_conversion": "Disabled by .gitattributes to preserve every manifested byte"
 }
