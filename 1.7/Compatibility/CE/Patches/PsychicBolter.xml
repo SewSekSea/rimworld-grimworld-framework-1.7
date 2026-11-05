@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Combat Extended</li></mods>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/ThingDef[defName="GW_TotE_SOSBolter" and not(comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]) and not(verbs/li[starts-with(verbClass,"CombatExtended.")])]</xpath>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <CombatExtended.AmmoSetDef>
+                <defName>GW_CE17_SOSBolterAmmo</defName>
+                <label>Vratine .75 cal bolts</label>
+                <ammoTypes><Ammo_Bolter75_Standard>GW_TotE_SOSBolter_Bullet</Ammo_Bolter75_Standard></ammoTypes>
+              </CombatExtended.AmmoSetDef>
+            </value>
+          </li>
+          <li Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="GW_TotE_SOSBolter_Bullet"]/thingClass</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SOSBolter_Bullet"]/thingClass</xpath>
+              <value><thingClass>CombatExtended.BulletCE</thingClass></value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="GW_TotE_SOSBolter_Bullet"]</xpath>
+              <value><thingClass>CombatExtended.BulletCE</thingClass></value>
+            </nomatch>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="GW_TotE_SOSBolter_Bullet"]/projectile</xpath>
+            <value>
+              <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageDef>Bullet</damageDef><damageAmountBase>49</damageAmountBase>
+                <speed>129</speed><dropsCasings>false</dropsCasings><explosionRadius>0</explosionRadius>
+                <armorPenetrationSharp>30</armorPenetrationSharp><armorPenetrationBlunt>384.48</armorPenetrationBlunt>
+                <secondaryDamage><li><def>Bomb_Secondary</def><amount>30</amount></li></secondaryDamage>
+              </projectile>
+            </value>
+          </li>
+          <!-- CE's DamageInfo.Weapon is the projectile Def. Keep this modifier
+               private to the Vratine projectile so other .75 bolts are unchanged. -->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="GW_TotE_SOSBolter_Bullet"]</xpath>
+            <value>
+              <modExtensions>
+                <li Class="GW_PsyDamage.ModExtension_PsyToDamage">
+                  <minimumPsySensitivityToApply>1</minimumPsySensitivityToApply>
+                  <damagePerThresholdMark>0.05</damagePerThresholdMark>
+                  <applyBonusEveryPercent>0.20</applyBonusEveryPercent>
+                  <showBonusDamageText>true</showBonusDamageText>
+                  <dealLessDamageIfBelowThreshold>false</dealLessDamageIfBelowThreshold>
+                  <useUserPsySensitivityForScaling>false</useUserPsySensitivityForScaling>
+                </li>
+              </modExtensions>
+            </value>
+          </li>
+          <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+            <defName>GW_TotE_SOSBolter</defName>
+            <statBases><SightsEfficiency>1</SightsEfficiency><ShotSpread>0.09</ShotSpread><SwayFactor>1.5</SwayFactor><Bulk>8</Bulk></statBases>
+            <Properties>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass><hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>GW_TotE_SOSBolter_Bullet</defaultProjectile>
+              <warmupTime>2.1</warmupTime><range>28</range><ticksBetweenBurstShots>15</ticksBetweenBurstShots><burstShotCount>3</burstShotCount>
+              <soundCast>Talon_Bolt_Gun_Sound</soundCast><soundCastTail>GunTail_Medium</soundCastTail><muzzleFlashScale>11</muzzleFlashScale><recoilAmount>1.6</recoilAmount>
+            </Properties>
+            <AmmoUser><ammoSet>GW_CE17_SOSBolterAmmo</ammoSet><magazineSize>30</magazineSize><reloadTime>5.2</reloadTime></AmmoUser>
+            <FireModes><aiAimMode>Snapshot</aiAimMode><aiUseBurstMode>false</aiUseBurstMode></FireModes>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>

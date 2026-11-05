@@ -1,0 +1,9 @@
+.vs/
+obj/
+bin/
+*.user
+*.pdb
+*.mdb
+*.bak
+PrivateAuth/
+.env

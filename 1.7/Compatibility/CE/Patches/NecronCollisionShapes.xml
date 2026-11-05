@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- This folder loads only with CE. The shared Necron humanoid body needs
+       CE's normal lying/downed shape; standing bounds retain native sizing. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[@Name="GW40K_BaseNecronRace"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[@Name="GW40K_BaseNecronRace"]/modExtensions/li[@Class="CombatExtended.RacePropertiesExtensionCE"]</xpath>
+          <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[@Name="GW40K_BaseNecronRace"]/modExtensions/li[@Class="CombatExtended.RacePropertiesExtensionCE"]/bodyShape</xpath>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[@Name="GW40K_BaseNecronRace"]/modExtensions/li[@Class="CombatExtended.RacePropertiesExtensionCE"]</xpath>
+              <value><bodyShape>Humanoid</bodyShape></value>
+            </nomatch>
+          </match>
+          <nomatch Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[@Name="GW40K_BaseNecronRace"]/modExtensions</xpath>
+                <nomatch Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[@Name="GW40K_BaseNecronRace"]</xpath>
+                  <value><modExtensions /></value>
+                </nomatch>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[@Name="GW40K_BaseNecronRace"]/modExtensions</xpath>
+                <value>
+                  <li Class="CombatExtended.RacePropertiesExtensionCE">
+                    <bodyShape>Humanoid</bodyShape>
+                  </li>
+                </value>
+              </li>
+            </operations>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

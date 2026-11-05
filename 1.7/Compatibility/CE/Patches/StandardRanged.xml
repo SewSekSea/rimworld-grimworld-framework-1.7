@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Combat Extended</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_AOD_Gun_PlasmaCannon" and not(comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]) and not(verbs/li[starts-with(verbClass,"CombatExtended.")])]</xpath>
+          <match Class="CombatExtended.PatchOperationMakeGunCECompatible">
+            <defName>GW_AOD_Gun_PlasmaCannon</defName>
+            <statBases>
+              <SightsEfficiency>1</SightsEfficiency>
+              <ShotSpread>0.09</ShotSpread>
+              <SwayFactor>1.5</SwayFactor>
+              <Bulk>22.5</Bulk>
+            </statBases>
+            <Properties>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>Bullet_PlasmaCannon</defaultProjectile>
+              <warmupTime>2.2</warmupTime>
+              <range>35</range>
+              <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+              <burstShotCount>1</burstShotCount>
+              <soundCast>GW_Plasma_Gun_Sound</soundCast>
+              <soundCastTail>GunTail_Medium</soundCastTail>
+              <muzzleFlashScale>10</muzzleFlashScale>
+              <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+              </targetParams>
+              <recoilAmount>4.6</recoilAmount>
+            </Properties>
+            <AmmoUser>
+              <ammoSet>AmmoSet_PlasmaCanister_Cannon</ammoSet>
+              <magazineSize>45</magazineSize>
+              <reloadTime>13</reloadTime>
+            </AmmoUser>
+            <FireModes>
+              <aiAimMode>Snapshot</aiAimMode>
+              <aiUseBurstMode>false</aiUseBurstMode>
+            </FireModes>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_Rulers_Gun_AstartesPlasmaCannon" and not(comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]) and not(verbs/li[starts-with(verbClass,"CombatExtended.")])]</xpath>
+          <match Class="CombatExtended.PatchOperationMakeGunCECompatible">
+            <defName>GW_Rulers_Gun_AstartesPlasmaCannon</defName>
+            <statBases>
+              <SightsEfficiency>1</SightsEfficiency>
+              <ShotSpread>0.09</ShotSpread>
+              <SwayFactor>1.5</SwayFactor>
+              <Bulk>22.5</Bulk>
+            </statBases>
+            <Properties>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>Bullet_PlasmaCannon</defaultProjectile>
+              <warmupTime>1.2</warmupTime>
+              <range>35</range>
+              <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+              <burstShotCount>1</burstShotCount>
+              <soundCast>GW_Plasma_Gun_Sound</soundCast>
+              <soundCastTail>GunTail_Medium</soundCastTail>
+              <muzzleFlashScale>10</muzzleFlashScale>
+              <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+              </targetParams>
+              <recoilAmount>4.6</recoilAmount>
+            </Properties>
+            <AmmoUser>
+              <ammoSet>AmmoSet_PlasmaCanister_Cannon</ammoSet>
+              <magazineSize>25</magazineSize>
+              <reloadTime>13</reloadTime>
+            </AmmoUser>
+            <FireModes>
+              <aiAimMode>Snapshot</aiAimMode>
+              <aiUseBurstMode>false</aiUseBurstMode>
+            </FireModes>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_Rulers_Bolter_Gun_Bolter" and not(comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]) and not(verbs/li[starts-with(verbClass,"CombatExtended.")])]</xpath>
+          <match Class="CombatExtended.PatchOperationMakeGunCECompatible">
+            <defName>GW_Rulers_Bolter_Gun_Bolter</defName>
+            <statBases>
+              <SightsEfficiency>1</SightsEfficiency>
+              <ShotSpread>0.09</ShotSpread>
+              <SwayFactor>1.5</SwayFactor>
+              <Bulk>8</Bulk>
+            </statBases>
+            <Properties>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>Bullet_Bolter75_Standard</defaultProjectile>
+              <warmupTime>0.8</warmupTime>
+              <range>30</range>
+              <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+              <burstShotCount>4</burstShotCount>
+              <soundCast>GW_Heavy_Bolt_Gun_Sound</soundCast>
+              <soundCastTail>GunTail_Medium</soundCastTail>
+              <muzzleFlashScale>8</muzzleFlashScale>
+              <recoilAmount>1.6</recoilAmount>
+            </Properties>
+            <AmmoUser>
+              <ammoSet>AmmoSet_Bolter75</ammoSet>
+              <magazineSize>36</magazineSize>
+              <reloadTime>5.2</reloadTime>
+            </AmmoUser>
+            <FireModes>
+              <aiAimMode>Snapshot</aiAimMode>
+              <aiUseBurstMode>false</aiUseBurstMode>
+            </FireModes>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_Rulers_MeltaGun" and not(comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]) and not(verbs/li[starts-with(verbClass,"CombatExtended.")])]</xpath>
+          <match Class="CombatExtended.PatchOperationMakeGunCECompatible">
+            <defName>GW_Rulers_MeltaGun</defName>
+            <statBases>
+              <SightsEfficiency>1</SightsEfficiency>
+              <ShotSpread>0.09</ShotSpread>
+              <SwayFactor>1.5</SwayFactor>
+              <Bulk>13</Bulk>
+            </statBases>
+            <Properties>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>Bullet_Laser_MeltaCharge</defaultProjectile>
+              <warmupTime>1</warmupTime>
+              <range>18</range>
+              <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+              <burstShotCount>1</burstShotCount>
+              <soundCast>GW_Multi_Melta_Gun_Sound</soundCast>
+              <soundCastTail>GunTail_Heavy</soundCastTail>
+              <muzzleFlashScale>12</muzzleFlashScale>
+              <recoilAmount>2.7</recoilAmount>
+            </Properties>
+            <AmmoUser>
+              <ammoSet>AmmoSet_MeltaCharge</ammoSet>
+              <magazineSize>5</magazineSize>
+              <reloadTime>4.8</reloadTime>
+            </AmmoUser>
+            <FireModes>
+              <aiAimMode>Snapshot</aiAimMode>
+              <aiUseBurstMode>false</aiUseBurstMode>
+            </FireModes>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_Rulers_AstartesShotgun" and not(comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]) and not(verbs/li[starts-with(verbClass,"CombatExtended.")])]</xpath>
+          <match Class="CombatExtended.PatchOperationMakeGunCECompatible">
+            <defName>GW_Rulers_AstartesShotgun</defName>
+            <statBases>
+              <SightsEfficiency>1</SightsEfficiency>
+              <ShotSpread>0.09</ShotSpread>
+              <SwayFactor>1.5</SwayFactor>
+              <Bulk>12</Bulk>
+            </statBases>
+            <Properties>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>Bullet_23x75mmR_Buck</defaultProjectile>
+              <warmupTime>0.80</warmupTime>
+              <range>16</range>
+              <burstShotCount>1</burstShotCount>
+              <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+              <soundCast>Shot_Shotgun</soundCast>
+              <soundCastTail>GunTail_Heavy</soundCastTail>
+              <muzzleFlashScale>10</muzzleFlashScale>
+              <recoilAmount>2.5</recoilAmount>
+            </Properties>
+            <AmmoUser>
+              <ammoSet>AmmoSet_23x75mmR</ammoSet>
+              <magazineSize>9</magazineSize>
+              <reloadTime>5.4</reloadTime>
+            </AmmoUser>
+            <FireModes>
+              <aiAimMode>Snapshot</aiAimMode>
+              <aiUseBurstMode>false</aiUseBurstMode>
+            </FireModes>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_TotE_MeltaSpearR" and not(comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]) and not(verbs/li[starts-with(verbClass,"CombatExtended.")])]</xpath>
+          <match Class="CombatExtended.PatchOperationMakeGunCECompatible">
+            <defName>GW_TotE_MeltaSpearR</defName>
+            <statBases>
+              <SightsEfficiency>1</SightsEfficiency>
+              <ShotSpread>0.09</ShotSpread>
+              <SwayFactor>1.5</SwayFactor>
+              <Bulk>13</Bulk>
+            </statBases>
+            <Properties>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>Bullet_Laser_MeltaCharge</defaultProjectile>
+              <warmupTime>1.8</warmupTime>
+              <range>16</range>
+              <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+              <burstShotCount>1</burstShotCount>
+              <soundCast>GW_Multi_Melta_Gun_Sound</soundCast>
+              <soundCastTail>GunTail_Heavy</soundCastTail>
+              <muzzleFlashScale>12</muzzleFlashScale>
+              <targetParams>
+                <canTargetLocations>true</canTargetLocations>
+              </targetParams>
+              <recoilAmount>2.7</recoilAmount>
+            </Properties>
+            <AmmoUser>
+              <ammoSet>AmmoSet_MeltaCharge</ammoSet>
+              <magazineSize>3</magazineSize>
+              <reloadTime>4.8</reloadTime>
+            </AmmoUser>
+            <FireModes>
+              <aiAimMode>Snapshot</aiAimMode>
+              <aiUseBurstMode>false</aiUseBurstMode>
+            </FireModes>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_SM_Melee_ValdorSpearRanged" and not(comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]) and not(verbs/li[starts-with(verbClass,"CombatExtended.")])]</xpath>
+          <match Class="CombatExtended.PatchOperationMakeGunCECompatible">
+            <defName>GW_SM_Melee_ValdorSpearRanged</defName>
+            <statBases>
+              <SightsEfficiency>1</SightsEfficiency>
+              <ShotSpread>0.09</ShotSpread>
+              <SwayFactor>1.5</SwayFactor>
+              <Bulk>13</Bulk>
+            </statBases>
+            <Properties>
+              <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+              <hasStandardCommand>true</hasStandardCommand>
+              <defaultProjectile>Bullet_Bolter75_Standard</defaultProjectile>
+              <range>25</range>
+              <soundCast>GW_Heavy_Bolt_Gun_Sound</soundCast>
+              <burstShotCount>3</burstShotCount>
+              <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+              <soundCastTail>GunTail_Heavy</soundCastTail>
+              <muzzleFlashScale>9</muzzleFlashScale>
+              <warmupTime>1.2</warmupTime>
+              <recoilAmount>1.35</recoilAmount>
+            </Properties>
+            <AmmoUser>
+              <ammoSet>AmmoSet_Bolter75</ammoSet>
+              <magazineSize>12</magazineSize>
+              <reloadTime>5.2</reloadTime>
+            </AmmoUser>
+            <FireModes>
+              <aiAimMode>Snapshot</aiAimMode>
+              <aiUseBurstMode>false</aiUseBurstMode>
+            </FireModes>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,171 @@
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs</xpath>
+        <value>
+          <DamageDef ParentName="Beam">
+            <defName>GW_CE17_EnmiticBeam</defName>
+            <ignoreShields>true</ignoreShields>
+            <defaultArmorPenetration>1.2</defaultArmorPenetration>
+            <modExtensions Inherit="false">
+              <li Class="CombatExtended.DamageDefExtensionCE">
+                <isAmbientDamage>true</isAmbientDamage>
+                <canCauseWallFragmentation>false</canCauseWallFragmentation>
+              </li>
+            </modExtensions>
+          </DamageDef>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="GW40k_Necron_ChainChargeBullet"]</xpath>
+        <value>
+          <ThingDef ParentName="BaseBullet">
+            <defName>GW40k_Necron_ChainChargeBullet</defName>
+            <!-- Used for emitic -->
+            <label>beam repeater laser</label>
+            <thingClass>GrimWorld.CE17.CEChainProjectile17</thingClass>
+            <graphicData>
+              <texPath>Things/Projectile/Bullet_Small</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+            </graphicData>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+              <damageDef>GW_CE17_EnmiticBeam</damageDef>
+              <damageAmountBase>25</damageAmountBase>
+              <beamMoteDef>Mote_BeamRepeaterLaser</beamMoteDef>
+              <beamStartOffset>0.5</beamStartOffset>
+              <speed>5</speed>
+              <gravityFactor>0.001</gravityFactor>
+              <armorPenetrationSharp>0</armorPenetrationSharp>
+              <armorPenetrationBlunt>0</armorPenetrationBlunt>
+              <dropsCasings>false</dropsCasings>
+            </projectile>
+            <modExtensions>
+              <li Class="ChainProjectiles.ChainProjectileModExtension">
+                <chainRange>4</chainRange>
+                <!-- reduced from 10 to 4 -->
+                <chainMaxCount>4</chainMaxCount>
+              </li>
+            </modExtensions>
+          </ThingDef>
+        </value>
+      </li>
+      <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>GW40k_Necron_Enmitic_Exterminator</defName>
+        <statBases>
+          <SightsEfficiency>1</SightsEfficiency>
+          <SwayFactor>1</SwayFactor>
+          <ShotSpread>0.05</ShotSpread>
+        </statBases>
+        <Properties>
+          <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+          <hasStandardCommand>true</hasStandardCommand>
+          <defaultProjectile>GW40k_Necron_ChainChargeBullet</defaultProjectile>
+          <warmupTime>3.5</warmupTime>
+          <range>35</range>
+          <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+          <burstShotCount>6</burstShotCount>
+          <soundCast>Shot_ChargeRifle</soundCast>
+          <soundCastTail>GunTail_Medium</soundCastTail>
+          <muzzleFlashScale>11</muzzleFlashScale>
+          <recoilAmount>0.4</recoilAmount>
+        </Properties>
+        <FireModes>
+          <aiAimMode>Snapshot</aiAimMode>
+          <aiUseBurstMode>true</aiUseBurstMode>
+        </FireModes>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="GW40k_Necron_Enmitic_Exterminator"]/modExtensions</xpath>
+        <value>
+          <li Class="GW_Frame.Compatibility.CEGaussEnergyPolicy17" />
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="GW40k_Necron_TeslaBeam"]</xpath>
+        <value>
+          <ThingDef ParentName="BaseBullet">
+            <defName>GW40k_Necron_TeslaBeam</defName>
+            <label>tesla beam</label>
+            <thingClass>GrimWorld.CE17.CEChainProjectile17</thingClass>
+            <drawOffscreen>true</drawOffscreen>
+            <graphicData>
+              <texPath>Things/Projectiles/TeslaCarbineMote</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+              <shaderType>TransparentPostLight</shaderType>
+            </graphicData>
+            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+              <!-- TeslaShock: custom def with harmsHealth=true + hediffDef=Burn (no bleed).
+			     EMP has harmsHealth=false so it deals zero HP damage to everyone.
+			     Burn alone doesn't damage non-flammable turrets (flammability=0 gating).
+			     TeslaShock is Heat-armored, makes burn wounds on flesh, reduces turret HP directly. -->
+              <damageDef>GW_UL_TeslaShock</damageDef>
+              <damageAmountBase>15</damageAmountBase>
+              <speed>140</speed>
+              <beamMoteDef>Mote_TeslaCarbineBeam</beamMoteDef>
+              <beamStartOffset>0.5</beamStartOffset>
+              <armorPenetrationSharp>0</armorPenetrationSharp>
+              <armorPenetrationBlunt>0</armorPenetrationBlunt>
+              <dropsCasings>false</dropsCasings>
+            </projectile>
+            <modExtensions>
+              <li Class="ChainProjectiles.ChainProjectileModExtension">
+                <chainRange>4</chainRange>
+                <!-- default 10 is crazy -->
+                <chainMaxCount>10</chainMaxCount>
+                <!-- default 10 (bounce reduction fixed in Framework)  -->
+              </li>
+            </modExtensions>
+          </ThingDef>
+        </value>
+      </li>
+      <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>GW40k_Necron_TeslaCarbine</defName>
+        <statBases>
+          <SightsEfficiency>1</SightsEfficiency>
+          <SwayFactor>1</SwayFactor>
+          <ShotSpread>0.05</ShotSpread>
+        </statBases>
+        <Properties>
+          <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+          <hasStandardCommand>true</hasStandardCommand>
+          <defaultProjectile>GW40k_Necron_TeslaBeam</defaultProjectile>
+          <warmupTime>2.8</warmupTime>
+          <range>26</range>
+          <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+          <burstShotCount>1</burstShotCount>
+          <soundCast>Shot_ChargeRifle</soundCast>
+          <soundCastTail>GunTail_Medium</soundCastTail>
+          <muzzleFlashScale>11</muzzleFlashScale>
+          <recoilAmount>0.4</recoilAmount>
+        </Properties>
+        <FireModes>
+          <aiAimMode>Snapshot</aiAimMode>
+          <aiUseBurstMode>true</aiUseBurstMode>
+        </FireModes>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="GW40k_Necron_TeslaCarbine"]/modExtensions</xpath>
+        <value>
+          <li Class="GW_Frame.Compatibility.CEGaussEnergyPolicy17" />
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/DamageDef[defName="GW_UL_TeslaShock" and not(defaultArmorPenetration)]</xpath>
+        <value>
+          <defaultArmorPenetration>0.25</defaultArmorPenetration>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/DamageDef[defName="GW_UL_TeslaShock" and not(modExtensions)]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="CombatExtended.DamageDefExtensionCE">
+              <isAmbientDamage>true</isAmbientDamage>
+            </li>
+          </modExtensions>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

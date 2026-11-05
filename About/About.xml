@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ModMetaData>
+  <name>GrimWorld 40,000 - Framework [SweetBriana 1.7]</name>
+  <author>GrimWorld Team; SweetBriana (1.7, Combat Extended and Vehicle Framework update)</author>
+  <packageId>Grimworld.Framework</packageId>
+  <modIconPath IgnoreIfNoMatchingField="True">UI/GrimWorldFrameworkModIcon</modIconPath>
+  <supportedVersions>
+    <li>1.7</li></supportedVersions>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>CETeam.CombatExtended</li>
+    <li>oskarpotocki.vanillafactionsexpanded.core</li>
+    
+  </loadAfter>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <description>
+Original creation: GrimWorld Team.
+1.7, Combat Extended and Vehicle Framework update: SweetBriana.
+Original contributors: Clashgore, Odzmang, BlackMarket420, Tittymcswaggy, Alite, Abomination, Epsilon, Maxim, Shun The Witch, Samael, Con, ThatHitmann, atxmatt2510
+Private 1.7 testing candidate; see the supplied compatibility scope before enabling.
+
+
+This is the framework for the Grimworld 40,000 mod series. 
+
+This currently adds:
+Core functionality leveraged by other mods in the series.
+  </description>
+</ModMetaData>

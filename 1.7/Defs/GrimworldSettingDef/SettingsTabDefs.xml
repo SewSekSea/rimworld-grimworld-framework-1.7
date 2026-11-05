@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!---->
+	<GW_Frame.Settings.SettingsTabDef>
+		<defName>WeaponTagSettings</defName>
+		<label>Weapon tags</label>
+		<settingsTabClass>GW_Frame.Settings.SettingsTabRecord_WeaponTags</settingsTabClass>
+		<settingsRecordClass>GW_Frame.Settings.SettingsRecord_WeaponTags</settingsRecordClass>
+	</GW_Frame.Settings.SettingsTabDef>
+	<!---->
+	<GW_Frame.Settings.SettingsTabDef>
+		<defName>PatchSettings</defName>
+		<label>Patches</label>
+		<settingsTabClass>GW_Frame.Settings.SettingsTabRecord_Patches</settingsTabClass>
+		<settingsRecordClass>GW_Frame.Settings.SettingsRecord_Patches</settingsRecordClass>
+	</GW_Frame.Settings.SettingsTabDef>
+	<!---->
+	<GW_Frame.Settings.SettingsTabDef>
+		<defName>MainSettings</defName>
+		<label>Settings</label>
+		<settingsTabClass>GW_Frame.Settings.SettingsTabRecord_Main</settingsTabClass>
+		<settingsRecordClass>GW_Frame.Settings.SettingsRecord_Main</settingsRecordClass>
+	</GW_Frame.Settings.SettingsTabDef>
+	<!---->
+</Defs>

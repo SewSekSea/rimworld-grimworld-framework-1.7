@@ -1,0 +1,772 @@
+{
+  "module": "GrimWorld-Framework",
+  "repository": "rimworld-grimworld-framework-1.7",
+  "license": "CC-BY-NC-SA-4.0",
+  "license_evidence": "https://steamcommunity.com/sharedfiles/filedetails/?id=3119805903",
+  "grant_scope_assessment": "module-specific Workshop declaration",
+  "upstream_repository": "https://github.com/GrimWorld-40-000/GrimWorld-Framework",
+  "upstream_workshop": "https://steamcommunity.com/sharedfiles/filedetails/?id=3119805903",
+  "upstream_base_commit": "Not established from delivered maintenance archive",
+  "selected_files": [
+    {
+      "path": ".gitignore",
+      "bytes": 67,
+      "sha256": "F5D7C1CF422EDE10CED09AE0ACF8222D5AE53E8E85758C5CC2F3327E2A08A108"
+    },
+    {
+      "path": "1.7/Assemblies/0Harmony.dll",
+      "bytes": 2456064,
+      "sha256": "932B52A8B17FB24EA906B02E36D0372D5E8EE62F3FF46225D089413D92B341E8"
+    },
+    {
+      "path": "1.7/Assemblies/AutoFabricationBench.dll",
+      "bytes": 5120,
+      "sha256": "7A80D2251ACA4E63457834C54BF0ED7F736C9BFBD3E1A3F5059CC041B8F29A07"
+    },
+    {
+      "path": "1.7/Assemblies/BM_ApparelSet.dll",
+      "bytes": 10240,
+      "sha256": "EEB321AF2DA16ECE80450E6E25FC1EA5E363881643869AE7866416E6F983B629"
+    },
+    {
+      "path": "1.7/Assemblies/ChainProjectiles.dll",
+      "bytes": 11776,
+      "sha256": "2AF47EB3F26017FBEE8E90220CBE0E915D122B39E10FE5A989736592F9186F9C"
+    },
+    {
+      "path": "1.7/Assemblies/Chamber.dll",
+      "bytes": 25088,
+      "sha256": "BED68BAA6C039D3AD028724C383D4A61B5EE578254C5338BF851F37098F075AC"
+    },
+    {
+      "path": "1.7/Assemblies/ColorPicker.dll",
+      "bytes": 33280,
+      "sha256": "B95E4F4D2181C93C735517D1A769DF321EF77F00E941C4E9CC8AAEF18B67025A"
+    },
+    {
+      "path": "1.7/Assemblies/CompAbilityBurstProjectiles.dll",
+      "bytes": 7168,
+      "sha256": "5C48991A7406C7CDD14EDDC348737ED6BCD54C0C7B39634D2C3FA93E5FE07F30"
+    },
+    {
+      "path": "1.7/Assemblies/ExplosiveJump.dll",
+      "bytes": 9216,
+      "sha256": "8294F7BF8CC99F340182B65666F52A9D9C8CA234A4267C45BF4857480C95EA73"
+    },
+    {
+      "path": "1.7/Assemblies/GravDamege.dll",
+      "bytes": 5632,
+      "sha256": "FADCB6865BBB173AA185596C66EDC3C8D7437B4D6CE86549753F7FA665502D30"
+    },
+    {
+      "path": "1.7/Assemblies/GrimWorld.VehicleHandlerCache17.dll",
+      "bytes": 11776,
+      "sha256": "4E5FEB5614B3603A0668E9F9365EBA25BCC2D3A5B3FEBE3CCCAA4E8024E8BFAA"
+    },
+    {
+      "path": "1.7/Assemblies/GrimWorld.VehicleReservationDuty17.dll",
+      "bytes": 11776,
+      "sha256": "C3EE977563813F4778E024395D71FE63DB9C33394388C68206B8B51E12A4EAD8"
+    },
+    {
+      "path": "1.7/Assemblies/GrimWorld_Framework.dll",
+      "bytes": 94208,
+      "sha256": "B142D3D9A6786377EB55BC063C70F40DB99C13A0265282948A2DAD08EBE4599A"
+    },
+    {
+      "path": "1.7/Assemblies/GrimworldItemLimit.dll",
+      "bytes": 10240,
+      "sha256": "D2FD25606308139110FBC7FD2F729A7A08DED8458F84F1473F2FE9E10426FB9E"
+    },
+    {
+      "path": "1.7/Assemblies/GW40kHediffAura.dll",
+      "bytes": 16896,
+      "sha256": "181DAB5EBE0FA0693E0F2F21A1FA25ECE5AD1C3025C35D297B9329D92C9397F4"
+    },
+    {
+      "path": "1.7/Assemblies/GW4KArmor.dll",
+      "bytes": 52224,
+      "sha256": "147266E25F1F1181DE92664A13C782E0FE8AD4BF44E4FAF4CC94946BC4071F6C"
+    },
+    {
+      "path": "1.7/Assemblies/GW_ApparelRestriction.dll",
+      "bytes": 7680,
+      "sha256": "767F8614DA3774075F2FBF115545BBCB9A7222FDFA9A3A982FA1F36AB1669200"
+    },
+    {
+      "path": "1.7/Assemblies/GW_PsyDamage.dll",
+      "bytes": 6656,
+      "sha256": "4E0A4545CD13DAF973B6D806992477D89F306001897779ED4B581701CF2C4B52"
+    },
+    {
+      "path": "1.7/Assemblies/GWGarageDoors.dll",
+      "bytes": 19968,
+      "sha256": "7784EAC02C33951B9EAB88A6D0357A0077D31A4DD7398B45F91FCB924DF318CF"
+    },
+    {
+      "path": "1.7/Assemblies/GWParryShield.dll",
+      "bytes": 24064,
+      "sha256": "CDE3542B199F6958AB9CAA9038339ACCA57F244D4B71C92DE7BC6E1BE154916B"
+    },
+    {
+      "path": "1.7/Assemblies/GWRulers.dll",
+      "bytes": 8704,
+      "sha256": "1BAD9AED257398EB8097B2503F385DF73DF970767901D0F8EADA124313EFED5E"
+    },
+    {
+      "path": "1.7/Assemblies/GWRulers.dll.old",
+      "bytes": 5120,
+      "sha256": "7E9E9F54C7C46FDFDE90A5CFB00498438242094692831642EBB447F206306933"
+    },
+    {
+      "path": "1.7/Assemblies/HediffStageAttackProgress.dll",
+      "bytes": 5632,
+      "sha256": "B533DA341F93141F3B0E7778ADD76018B21C5806A0D2E941326714C33C210CB0"
+    },
+    {
+      "path": "1.7/Assemblies/OnAttackHediff.dll",
+      "bytes": 6144,
+      "sha256": "452A1D437B737C204FDE49A9F9AF11C3CADE75ACBA235DBE929E8EEB3D9A0692"
+    },
+    {
+      "path": "1.7/Assemblies/RecipeMod.dll",
+      "bytes": 6144,
+      "sha256": "DD7C940113E54DAECB06CABFDC9AC8872C7034F3483654789940D7D8867B7A21"
+    },
+    {
+      "path": "1.7/Assemblies/ShieldApparelFix.dll",
+      "bytes": 5120,
+      "sha256": "D851A091EE72B8F16E8BD720A7E07A195B686241D8E67EAE425C3CE721B65223"
+    },
+    {
+      "path": "1.7/Assemblies/Vehicles_of_Grimworld.dll",
+      "bytes": 19456,
+      "sha256": "355DAECC1915B0396EE87D2372856F8639BEAE39838930DD59F8090C5D039A40"
+    },
+    {
+      "path": "1.7/Assemblies/WeaponSwitch.dll",
+      "bytes": 13824,
+      "sha256": "35572E2FBBC10F36587271D1BAD0C2786DF88F6F1E8443496FB6FC3D3AADB940"
+    },
+    {
+      "path": "1.7/Assemblies/XpDrain.dll",
+      "bytes": 7168,
+      "sha256": "45C5C00D4DA52D0999D953E200B9C4ABEB662F856FA4A89E050E7CBB11BA3CD3"
+    },
+    {
+      "path": "1.7/Compatibility/CE/Assemblies/GrimWorld.CE17Adapters.dll",
+      "bytes": 10752,
+      "sha256": "2E1615A631CDFBD1528CEF193D7E0FFF2731E4FBF2E6792FD2D9D0778AECC778"
+    },
+    {
+      "path": "1.7/Compatibility/CE/Patches/Earthshaker.xml",
+      "bytes": 21190,
+      "sha256": "D9016A0E5DF369CC4B4267224778FD46F593D564628C361519CDFE40ABA45607"
+    },
+    {
+      "path": "1.7/Compatibility/CE/Patches/NecronBeams.xml",
+      "bytes": 15496,
+      "sha256": "5FB6EE8E02FCEDDB2533C84049E3012E3B936A1EF723517363469DC7E374E03B"
+    },
+    {
+      "path": "1.7/Compatibility/CE/Patches/NecronChains.xml",
+      "bytes": 7490,
+      "sha256": "E4DF6FDE4AC34A05EED42DF59583A618FC708C516B405C1965B7866FDC72FA05"
+    },
+    {
+      "path": "1.7/Compatibility/CE/Patches/NecronCollisionShapes.xml",
+      "bytes": 1969,
+      "sha256": "129A6B93D0F7C8AC1A1EAF0915D01BC46370284D4AC4783C9EDD9B3F2312C63E"
+    },
+    {
+      "path": "1.7/Compatibility/CE/Patches/PsychicBolter.xml",
+      "bytes": 4314,
+      "sha256": "B70EAAD7C9A5AB0635FDF32D004A9A19829100603737D24F98209C7430B0B3DF"
+    },
+    {
+      "path": "1.7/Compatibility/CE/Patches/RemainingWeaponBulk.xml",
+      "bytes": 5621,
+      "sha256": "376670BDDC1E8CB2356BF9F637394BEEAF231381B75D644F4DE10A6973D08540"
+    },
+    {
+      "path": "1.7/Compatibility/CE/Patches/StandardRanged.xml",
+      "bytes": 12317,
+      "sha256": "13C2C0168B04D487ADDD6984D9F718E41B43623B80AB10AFDD4F85DBAE7D1760"
+    },
+    {
+      "path": "1.7/Defs/Designations/Designations.xml",
+      "bytes": 872,
+      "sha256": "9A3D5BD747352F13BF0C6CA3C1FAF97657C1D35C0286869C0FE390003C14B2AF"
+    },
+    {
+      "path": "1.7/Defs/GeneDefs/GeneDef_PowerArmorBypass.xml",
+      "bytes": 1360,
+      "sha256": "FBF2419CFE1889548F0BFA3F305C3514952F55E6E425CA860098EC39BCA7F5D6"
+    },
+    {
+      "path": "1.7/Defs/GrimworldSettingDef/SettingsTabDefs.xml",
+      "bytes": 1030,
+      "sha256": "125F5C7423D8700C2D2A22B614EB60ED85F0EEA7D677865540F82B519C56A438"
+    },
+    {
+      "path": "1.7/Defs/IndoctrinationChamber/Chamber_Job.xml",
+      "bytes": 421,
+      "sha256": "9450E1A20FF2A2FFC90A527C57BB85EA3696B2386C28BD1376D12BA1CCFDA6E9"
+    },
+    {
+      "path": "1.7/Defs/IndoctrinationChamber/ChamberBrainDamage_Hediff.xml",
+      "bytes": 2223,
+      "sha256": "76DBBF72AA205FA0291AF064661659A348F4EE54D6692AA699A0B1553CD02155"
+    },
+    {
+      "path": "1.7/Defs/IndoctrinationChamber/ChamberSickness_Hediff.xml",
+      "bytes": 2139,
+      "sha256": "86EBDCA722911889CF9A26C8275E63E5D84E4FF74748D35B76F1BD7B579AC641"
+    },
+    {
+      "path": "1.7/Defs/JobDefs/Jobs.xml",
+      "bytes": 586,
+      "sha256": "169B741EDF48E9CDB450D24CC7AAFD3625259D8AE6253AAFF09ADB8D14F12615"
+    },
+    {
+      "path": "1.7/Defs/ParryDefBase.xml",
+      "bytes": 6468,
+      "sha256": "E120BBC9260BDBFDB4E1CB48B7402EFEFF4526A8C6985F2B4B6430C7431B22F1"
+    },
+    {
+      "path": "1.7/Defs/Scenarios/ScenParts_Various.xml",
+      "bytes": 889,
+      "sha256": "1D5390014CB512F7C59540DB345F6B61A6DE540EDE5270279B03037E28001F9A"
+    },
+    {
+      "path": "1.7/Defs/SupporterMonuments.xml",
+      "bytes": 7188,
+      "sha256": "31AE4157F628A6FC5788BE47EA1268A0D9DE1BD3AF626C23F8C6544219AB3C84"
+    },
+    {
+      "path": "1.7/Defs/ThingCategoryDefs.xml",
+      "bytes": 351,
+      "sha256": "693A1660B19B6F2126EF86E03A0EAA37FEF994872D6F75BA6AA48687558EE2DC"
+    },
+    {
+      "path": "1.7/Defs/UniversalGrimworldBases.xml",
+      "bytes": 3357,
+      "sha256": "1430196C0729C21AA8C054D76FA87C18E574654C20BE0B6457BC7673B7ABB202"
+    },
+    {
+      "path": "1.7/Patches/CE/SwitchableMeleeForm.xml",
+      "bytes": 1362,
+      "sha256": "2CF67B2FF637BAC8FA988C43F2F486DFE3EF4EE5DF4FCEE30EB110AFE3D75EB9"
+    },
+    {
+      "path": "1.7/Patches/RemoveArmorLimit.xml",
+      "bytes": 339,
+      "sha256": "2A5F4FC49E5EEA01410AA15C5CD20E888E7AD4B468463CD5C58F3C0AE0DCB02E"
+    },
+    {
+      "path": "1.7/Patches/SupporterMonumentsPatch.xml",
+      "bytes": 253,
+      "sha256": "46B24CA4DD07AF542F805A25BA355D3D9D9F19D24F96B442A8A801133EDA367E"
+    },
+    {
+      "path": "1.7/Rendering/Shaders/GW4KArmorTriMask.frag.glsl",
+      "bytes": 1126,
+      "sha256": "258A6367E952CA5F6EAD7F877C5C5B6A0CA35EDEF7499E03439745F77318C1C2"
+    },
+    {
+      "path": "About/About.xml",
+      "bytes": 1454,
+      "sha256": "F9B52D333A76565717D8D2DFBC9C15FB3C16D2D688808A06BD7420E2BDDA5F4A"
+    },
+    {
+      "path": "About/Preview.png",
+      "bytes": 630008,
+      "sha256": "1CB0E364058D1CB2370A616CCD439F8D40136FBDFEFE1782C8251E3BFFF1B7C7"
+    },
+    {
+      "path": "CREDITS.md",
+      "bytes": 1602,
+      "sha256": "26F0DB20333C79C07CCC0E9CD18323E0F2A046552CBB34FE1CAE2B6E3AC07329"
+    },
+    {
+      "path": "Languages/English/Keyed/EquipRestrictKeyed.xml",
+      "bytes": 1261,
+      "sha256": "99CF461AE4B0EC5F16FF4680E874CEE98A9BC7ECAD90102603CAA1A24A33E7D5"
+    },
+    {
+      "path": "Languages/English/Keyed/GW_ApparelRestrict.xml",
+      "bytes": 954,
+      "sha256": "90CB48B33A0C66137EF48BD4B2D254B5D965086B0A18551B1EAC1B6B91442EEB"
+    },
+    {
+      "path": "Languages/English/Keyed/Misc_Gameplay.xml",
+      "bytes": 1048,
+      "sha256": "4DFE59971527DBB175663B585209F9EC30FEF9A1216C5BE6D3AD82863E7C702A"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 20850,
+      "sha256": "E66C269D4819AAAB34B49EF5220C4DDAB6756F21BB5180761A4EB8561F2B7BBD"
+    },
+    {
+      "path": "LICENSES/Harmony-MIT.txt",
+      "bytes": 1073,
+      "sha256": "A5883D0C45EB7E176D3D1631220E7F96E958E37064773D40245AE6DB560BBD6D"
+    },
+    {
+      "path": "LoadFolders.xml",
+      "bytes": 195,
+      "sha256": "90A4008F0D064875EADE36AA4D6DFB9057E0E5FDB91C7547F0907E5CC7443387"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 1511,
+      "sha256": "5D4F858D9A4FDE4853442AE8CF2ED75F651D7E647EBE289CEBDE14703249E4BC"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2004,
+      "sha256": "CC9ADBF4D0515ACD2104F59F1AF6B1B344D3E6B326365DAA05530BE7CA4D08F2"
+    },
+    {
+      "path": "Textures/Things/Building/GarageDoors/GW_GarageDoor_Close.png",
+      "bytes": 19672,
+      "sha256": "DF67636D00E2467576438D39E2CB64230E58AF203536E49CFB009165887AEF63"
+    },
+    {
+      "path": "Textures/Things/Building/GarageDoors/GW_GarageDoor_Open.png",
+      "bytes": 20072,
+      "sha256": "250B771163527E867C148C2325AC915A9875B30F8B77055DDBB69CDFB572D413"
+    },
+    {
+      "path": "Textures/Things/Building/Obelisks/Obelisk_Fancy.png",
+      "bytes": 23575,
+      "sha256": "7E4F0BD27006F44969043ACA323C4DF6116BD38B2FAADA6A96968793C64CF798"
+    },
+    {
+      "path": "Textures/Things/Building/Obelisks/Obelisk_Fancy_m.png",
+      "bytes": 15889,
+      "sha256": "4D477F540FFD66C7134D2776F6FD66557376AA98F03E7B1C83A8D23E52C67B76"
+    },
+    {
+      "path": "Textures/Things/Building/Obelisks/Obelisk_Ordinary.png",
+      "bytes": 8527,
+      "sha256": "C4449AEBF7F773FB9C23B928CD945D1B1B18068B6EC587CFC4169872F1D77F4C"
+    },
+    {
+      "path": "Textures/UI/GrimWorldFrameworkModIcon.png",
+      "bytes": 5468,
+      "sha256": "C61CD3652F038F3D8FB6BB610143EF6AB3BC46C4F62E654BADB4A77A31813F06"
+    },
+    {
+      "path": "Textures/UI/Icon_PaintTool.png",
+      "bytes": 28303,
+      "sha256": "9A768C2255092CF988E87FEA460B15892A7D9F213A511AEA1D1195FC129E0DE1"
+    },
+    {
+      "path": "Textures/UI/Icon_PaintToolMulti.png",
+      "bytes": 49526,
+      "sha256": "2C4D698390FE7E00D2486CEC5BA3C3E40AA78C9C6816FB6B0FA0C4B674E20C29"
+    },
+    {
+      "path": "Textures/UI/ImperiumStudy.png",
+      "bytes": 2699,
+      "sha256": "D6208B887E7AB7A372EF93BC6077F7F244CAF93183F10ACD4495E3B6AEE31FF9"
+    },
+    {
+      "path": "THIRD-PARTY-NOTICES.md",
+      "bytes": 571,
+      "sha256": "E577DC12DCDDDFEABEFE7372737934BD6C4351FB64DC5D47D2D26CA8984F0DB4"
+    },
+    {
+      "path": "UPSTREAM-README.md",
+      "bytes": 77,
+      "sha256": "F20D89B06174C654FC7C90B7DE49B7A9E048D5A0F5021FE3D19B502582170F86"
+    }
+  ],
+  "omitted": [
+    {
+      "path": "1.4\\1.4Source.zip",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Assemblies\\0Harmony.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Assemblies\\Chamber.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Assemblies\\ColorPicker.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Assemblies\\GrimWorld_Framework.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Assemblies\\GW4KArmor.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\AssetBundles\\StandaloneLinux64\\gw4k",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\AssetBundles\\StandaloneLinux64\\gw4k.manifest",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\AssetBundles\\StandaloneOSX\\gw4k",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\AssetBundles\\StandaloneOSX\\gw4k.manifest",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\AssetBundles\\StandaloneWindows64\\gw4k",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\AssetBundles\\StandaloneWindows64\\gw4k.manifest",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Defs\\SupporterMonuments.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Defs\\UniversalGrimworldBases.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Patches\\RemoveArmorLimit.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.4\\Patches\\SupporterMonumentsPatch.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\0Harmony.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\BM_ApparelSet.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\ColorPicker.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\CompAbilityBurstProjectiles.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\eridanus_quests.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\ExplosiveJump.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\GravDamege.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\GrimWorld_Framework.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\GrimworldItemLimit.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\GW40kHediffAura.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\GW4KArmor.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\GW_PsyDamage.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\GWParryShield.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\HediffStageAttackProgress.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\IndoctrinationChamber.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\OnAttackHediff.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\RecipeMod.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\ShieldApparel.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\Vehicles_of_Grimworld.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Assemblies\\WeaponSwitch.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\AssetBundles\\StandaloneLinux64\\gw4k",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\AssetBundles\\StandaloneLinux64\\gw4k.manifest",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\AssetBundles\\StandaloneOSX\\gw4k",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\AssetBundles\\StandaloneOSX\\gw4k.manifest",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\AssetBundles\\StandaloneWindows64\\gw4k",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\AssetBundles\\StandaloneWindows64\\gw4k.manifest",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\IndoctrinationChamber\\Chamber_Job.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\IndoctrinationChamber\\ChamberBrainDamage_Hediff.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\IndoctrinationChamber\\ChamberSickness_Hediff.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\IndoctrinationChamber\\SettingsTabDefs.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\Scenarios\\ScenParts_Various.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\SettingsTabDefs.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\SupporterMonuments.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\ThingCategoryDefs.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Defs\\UniversalGrimworldBases.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Patches\\RemoveArmorLimit.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.5\\Patches\\SupporterMonumentsPatch.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\0Harmony.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\AutoFabricationBench.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\BM_ApparelSet.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\ChainProjectiles.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\Chamber.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\ColorPicker.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\CompAbilityBurstProjectiles.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\ExplosiveJump.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GravDamege.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GrimWorld_Framework.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GrimworldItemLimit.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GW40kHediffAura.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GW4KArmor.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GW_ApparelRestriction.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GW_PsyDamage.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GWGarageDoors.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GWParryShield.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GWRulers.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\GWRulers.dll.old",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\HediffStageAttackProgress.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\OnAttackHediff.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\RecipeMod.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\ShieldApparelFix.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\Vehicles_of_Grimworld.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\WeaponSwitch.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Assemblies\\XpDrain.dll",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\AssetBundles\\StandaloneWindows64\\gw4k",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\AssetBundles\\StandaloneWindows64\\gw4k.manifest",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\Designations\\Designations.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\GeneDefs\\GeneDef_PowerArmorBypass.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\GrimworldSettingDef\\SettingsTabDefs.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\IndoctrinationChamber\\Chamber_Job.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\IndoctrinationChamber\\ChamberBrainDamage_Hediff.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\IndoctrinationChamber\\ChamberSickness_Hediff.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\JobDefs\\Jobs.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\ParryDefBase.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\Scenarios\\ScenParts_Various.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\SupporterMonuments.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\ThingCategoryDefs.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Defs\\UniversalGrimworldBases.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Patches\\RemoveArmorLimit.xml",
+      "reason": "older-version payload"
+    },
+    {
+      "path": "1.6\\Patches\\SupporterMonumentsPatch.xml",
+      "reason": "older-version payload"
+    }
+  ],
+  "runtime_dlls_unchanged_from_intake": true,
+  "csharp_sources_present": false,
+  "native_testing_for_publication": false
+}

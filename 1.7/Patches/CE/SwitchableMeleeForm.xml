@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- The pinned upstream CE patch targets the melee Melta Spear instead of
+       its ranged R form. StandardRanged.xml handles R; restore M's authored
+       melee-only interface without touching its tools or switch component. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods><li>Combat Extended</li></mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_TotE_MeltaSpear"]/verbs/li[starts-with(verbClass,"CombatExtended.Verb_Shoot")]</xpath>
+          <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="GW_TotE_MeltaSpear"]/verbs/li[starts-with(verbClass,"CombatExtended.Verb_Shoot")]</xpath>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GW_TotE_MeltaSpear"]/comps/li[@Class="CombatExtended.CompProperties_AmmoUser" or @Class="CombatExtended.CompProperties_FireModes"]</xpath>
+          <match Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="GW_TotE_MeltaSpear"]/comps/li[@Class="CombatExtended.CompProperties_AmmoUser" or @Class="CombatExtended.CompProperties_FireModes"]</xpath>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

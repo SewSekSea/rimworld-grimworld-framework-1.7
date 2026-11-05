@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- <ScenPartDef Name="eridanus_quests.ScenPart_PlayerParentFaction"> -->
+    <!-- <defName>PlayerParentFaction</defName> -->
+    <!-- <label>Player parent faction</label> -->
+    <!-- <category>StartingImportant</category> -->
+    <!-- <scenPartClass>eridanus_quests.ScenPart_PlayerParentFaction</scenPartClass> -->
+    <!-- <summaryPriority>1000</summaryPriority> -->
+    <!-- <maxUses>1</maxUses> -->
+  <!-- </ScenPartDef> -->
+  
+  <ScenPartDef>
+    <defName>GW_ConfigurePawnsKindDefs</defName>
+    <label>starting people</label>
+    <scenPartClass>ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs</scenPartClass>
+    <selectionWeight>0</selectionWeight>
+    <pageClass>Page_ConfigureStartingPawns</pageClass>
+    <summaryPriority>500</summaryPriority>
+    <category>Fixed</category>
+  </ScenPartDef>
+</Defs>
